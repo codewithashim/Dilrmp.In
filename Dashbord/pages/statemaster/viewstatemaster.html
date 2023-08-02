@@ -161,7 +161,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../../index.html" class="nav-link">
+                                    <a href="viewstatemaster.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View State</p>
                                     </a>
@@ -207,12 +207,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 >Add State Master</h1>
+                            <h1 >View State Master</h1>
                         </div>
                         <div class="col-sm-12">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Add State Master</li>
+                                <li class="breadcrumb-item active">View State Master</li>
                             </ol>
                         </div>
                     </div>
@@ -222,45 +222,50 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <div class="card">
+                    <div>
                         <div class="card-header" style="background: #e9710a;">
-                            <h3 class="card-title">Add State Master</h3>
+                            <h3 class="card-title">View State Master</h3>
                         </div>
                         <!-- /.card-header -->
-                        <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <label>State Name</label>
-                                    <input type="text" class="form-control" placeholder="State Name">
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                              <div class="card-header border-0">
+                                <div class="d-flex justify-content-between">
+                                  <h3 class="card-title" style="color: #e9710a;">All Stae</h3>
+                                  <a href="javascript:void(0);" style="color: #e9710a;">View Report</a>
                                 </div>
-                                <div class="form-group">
-                                    <label>State LGD Code</label>
-                                    <input type="text" class="form-control" placeholder="State LGD Code">
+                              </div>
+                              <div class="card-body">
+                                <div class="d-flex">
+                                  <p class="d-flex flex-column">
+                                    <span class="text-bold text-lg">820</span>
+                                    <span> Visitors Over Time</span>
+                                  </p>
+                                  <p class="ml-auto d-flex flex-column text-right">
+                                    <span class="text-success">
+                                      <i class="fas fa-arrow-up"></i> 12.5%
+                                    </span>
+                                    <span class="text-muted">Since last week</span>
+                                  </p>
                                 </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label>State type</label>
-                                        <select class="form-control">
-                                            <option>State</option>
-                                            <option>UT</option>
-                                        </select>
-                                    </div>
+                                <!-- /.d-flex -->
+              
+                                <div class="position-relative mb-4">
+                                  <canvas id="visitors-chart" height="200"></canvas>
                                 </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label>User Role</label>
-                                        <select class="form-control">
-                                            <option>User</option>
-                                            <option>Admin</option>
-                                            <option>Super Admin</option>
-                                        </select>
-                                    </div>
+              
+                                <div class="d-flex flex-row justify-content-end">
+                                  <span class="mr-2">
+                                    <i class="fas fa-square text-warning"></i> This Week
+                                  </span>
+              
+                                  <span>
+                                    <i class="fas fa-square text-gray"></i> Last Week
+                                  </span>
                                 </div>
-                                <div>
-                                    <button type="submit" class="btn " style="background: #e9710a;">Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                              </div>
+                            </div>
+                          </div>
                         <!-- /.card-body -->
                     </div>
                 </div><!-- /.container-fluid -->
@@ -274,6 +279,8 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
+    <!-- ./wrapper -->
+
     <section>
         <div class="nationalMarks">
             <img src="../../../images/Item ⏵ Link ⏵ digital-india.png.png" alt="">
@@ -318,8 +325,6 @@
         </div>
     </section>
 
-    <!-- ./wrapper -->
-
     <!-- jQuery -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
@@ -335,6 +340,36 @@
             bsCustomFileInput.init();
         });
     </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const ctx2 = document.getElementById('visitors-chart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'line', // You can change the chart type as needed
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'], // Add your chart labels here
+        datasets: [{
+          label: 'Visitors',
+          data: [100, 200, 150, 300, 250, 400], // Add your chart data here
+          backgroundColor: 'rgba(233, 113, 10, 0.2)', // Set the desired background color here
+          borderColor: '#e9710a', // Set the desired border color here
+          borderWidth: 1,
+          pointBackgroundColor: '#e9710a', // Set the color for data points (if applicable)
+          pointBorderColor: '#e9710a', // Set the border color for data points (if applicable)
+          pointRadius: 4, // Adjust the data point size (if applicable)
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
