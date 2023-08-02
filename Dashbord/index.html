@@ -234,48 +234,68 @@
 
       <!-- Main content -->
       <div class="content">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Data Overviews</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 10px">#</th>
-                    <th>Total States</th>
-                    <th>Total Districts</th>
-                    <th>Total Tehsils</th>
-                    <th>Total Villages</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>10</td>
-                    <td>
-                      <div>
-                        30
-                      </div>
-                    </td>
-                    <td>
-                      <div>
-                        30
-                      </div>
-                    </td>
-                    <td>
-                      <div>
-                        30
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+
+                <h1>Total States</h1>
+              </div>
+              <div class="icon">
+                <i class="fas fa-file text-white"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- /.card -->
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                <h1>Total Districts</h1>
+              </div>
+              <div class="icon">
+                <i class="fas fa-file text-white"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>44</h3>
+
+                <h1>Total Tehsils</h1>
+              </div>
+              <div class="icon">
+                <i class="fas fa-file text-black"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>65</h3>
+
+                <h1>Total Villages</h1>
+              </div>
+              <div class="icon">
+                <i class="fas fa-file text-white"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
         </div>
 
 
@@ -328,9 +348,7 @@
                 <div class="card-header border-0">
                   <div class="d-flex justify-content-between">
                     <h3 class="card-title" style="color: #e9710a;">Sales</h3>
-                    <a href="javascript:void(0);"
-                     style="color: #e9710a;"
-                    >View Report</a>
+                    <a href="javascript:void(0);" style="color: #e9710a;">View Report</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -404,7 +422,7 @@
 
   <script>
     const ctx1 = document.getElementById('myChart').getContext('2d');
-  
+
     new Chart(ctx1, {
       type: 'bar',
       data: {
@@ -425,9 +443,9 @@
         }
       }
     });
-  
+
     const ctx2 = document.getElementById('visitors-chart').getContext('2d');
-  
+
     new Chart(ctx2, {
       type: 'line', // You can change the chart type as needed
       data: {
