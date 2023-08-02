@@ -141,6 +141,14 @@
         font-size: 16px;
         padding-top: 0;
     }
+
+    .nationalMarks{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #e6e6e6;
+    }
 }
 
 
@@ -193,6 +201,13 @@
   .nationalMarks img {
     width: 10%;
   }
+  .nationalMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6;
+  }
 }
 
 @media (min-width: 823px) and (max-width: 1010px) {
@@ -211,9 +226,24 @@
   .nationalMarks img {
     width: 10%;
   }
+  .nationalMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6;
+  }
 }
 
 @media (min-width: 728px) and (max-width: 823px) {
+  .nationalMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6;
+  }
+  
   .nationalMarks img {
     width: 10%;
   }
@@ -281,7 +311,14 @@
   .externalLinks div h2 {
     font-size: 12px;
   }
+  .nationalMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6;
 
+  }
   .boxesReport {
     flex-direction: column;
     width: 80%;
@@ -321,7 +358,13 @@
   .groupVideo div iframe {
     width: 320px;
   }
-
+  .nationalMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6;
+  }
   .externalLinks {
     flex-direction: column;
   }
